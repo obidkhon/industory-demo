@@ -36,7 +36,7 @@ mongoose.connect('mongodb://localhost/test', { useNewUrlParser: true, useUnified
  async function getInventoryItems2(){
     return await Inventory
     .find()
-    .or([{qty:{$lte:50}},{item: /.*l.*/i}])
+    .or([{qty:{$lte:50}},{item: /.*p.*/i}])
     .sort({qty:-1})
    
 }
